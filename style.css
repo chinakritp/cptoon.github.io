@@ -1,0 +1,65 @@
+
+body {
+    margin: 0;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 10px;
+}
+#hp-banner {
+    height: 100vh;
+}
+.bg-overlay {
+    background: rgba(0, 0, 0, 0) url("img/pattern-stripe.png") repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0.3;
+}
+.content {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.name {
+    font-size: 5em;
+    letter-spacing: 8px;
+    color: #fff;
+}
+.name::before {
+    content: "Chinakrit";
+    font-size: 14px;
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    transition: 0.5s;
+}
+.name:hover::before,
+.name:active::before,
+.name:focus::before {
+    opacity: 1;
+    top: 0;
+}
+.name::after {
+    bottom: 20px;
+    content: "Pipaupatum";
+    font-size: 14px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+}
+.name:hover::after,
+.name:active::after,
+.name:focus::after {
+    bottom: 0;
+    opacity: 1;
+}
